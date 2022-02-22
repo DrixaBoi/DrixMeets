@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import { extractLocations } from './api';
+
 
 class CitySearch extends Component {
     state = {
         query: '',
-        suggestions: []
-    }
+        suggestions: [],
+        showSuggestions: undefined
+    };
+
     handleInputChanged = (event) => {
         const value = event.target.value;
         const suggestions = this.props.locations.filter((location) => {
-            return location.toUpperCase().indexOf(Value.toUpperCase()) > -1;
+            return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
         });
         this.setState({ 
             query: value,
@@ -18,7 +20,8 @@ class CitySearch extends Component {
     };
     handleItemClicked = (suggestion) => {
         this.setState({
-            query: suggestion
+            query: suggestion,
+            showSuggestions: false,
         });
     }
     render() {
