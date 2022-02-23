@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class Event extends Component {
+class Event extends Component {
 
     state = {
         collapsed: true

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-export class NumberOfEvents extends Component {
+class NumberOfEvents extends Component {
     state = {
         numberOfEvents: '32'
     }
@@ -13,7 +13,6 @@ export class NumberOfEvents extends Component {
         });
     }
 
-
     render() {
         return(
             <div className="NumberOfEvents">
@@ -22,6 +21,7 @@ export class NumberOfEvents extends Component {
                 onChange={this.handleInputChange} />
             </div>
         )
-    }};
+    }
+};
 
-    export default NumberOfEvents;
+export default NumberOfEvents;

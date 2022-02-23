@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
-import { NumberOfEvents } from './NumberOfEvents';
+import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api';
+import './nprogress.css';
 
 class App extends Component {
   
   state = {
     events: [],
     locations: [],
-    numberOfEvents: 32
+    numberOfEvents: 32,
   }
   
 componentDidMount() {
