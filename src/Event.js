@@ -28,7 +28,7 @@ class Event extends Component {
            {!collapsed && 
                 <div className="details-view">
                     <h2 className="details-header">About event:</h2>
-                    <a href={event.htmlLink} rel="noreferrer" target='_blank'>See details on Google Calendar</a>
+                    <a href={event.htmlLink} rel="noreferrer" target='_blank'>See details</a>
                     <p className='description'>{event.description}</p>
                 </div>
             }
