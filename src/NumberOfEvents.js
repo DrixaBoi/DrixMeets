@@ -13,3 +13,5 @@ export class NumberOfEvents extends Component {
         </div>
         )
     }};
+
+    export default NumberOfEvents;
