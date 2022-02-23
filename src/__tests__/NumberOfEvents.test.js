@@ -1,29 +1,22 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NumberOfEvents } from '../NumberOfEvents';
+import NumberOfEvents from '../NumberOfEvents';
 
 describe('<NumberOfEvents /> component', () => {
     let NumberOfEventsWrapper;
-    let spy; 
-
     beforeAll(() => {
-        spy = jest.spyOn({mockUpdateNumberOfEvents: ()=>{}}, "mockUpdateNumberOfEvents");
-        NumberOfEventsWrapper = shallow(<NumberOfEvents numberOfEvents={32} updateNumberOfEvents={ spy }/>);
+        NumberOfEventsWrapper = shallow(<NumberOfEvents />);
     });
 
     test('render text input', () => {
-        expect(NumberOfEventsWrapper.find('.number')).toHaveLength(1);
-    });
-
-    test('render text input correctly', () => {
-        expect(NumberOfEventsWrapper.find('.number').prop('value')).toBe(32);
+        expect(NumberOfEventsWrapper.find('.numberOfEvents')).toHaveLength(1);
     });
 
     test('change state when text input changes', () => {
-        const numberOfEventObject = { target: { value: '30'}};
-        NumberOfEventsWrapper.find('.number').simulate('change', numberOfEventObject);
-        expect(spy).toHaveBeenCalled();
+        NumberOfEventsWrapper.setState({ numberOfEvents: '32' });
+        NumberOfEventsWrapper.find(".numberOfEvents").simulate("change", {
+            target: { value: "13" }
+        });
+        expect(NumberOfEventsWrapper.state("numberOfEvents")).toEqual("13");
     });
-
-
 });

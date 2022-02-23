@@ -3,6 +3,7 @@ import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import { NumberOfEvents } from './NumberOfEvents';
+import { getEvents, extractLocations } from './api';
 
 class App extends Component {
   
@@ -12,46 +13,35 @@ class App extends Component {
     numberOfEvents: 32
   }
   
-  updateEvents = (location, eventCount = this.state.numberOfEvents) => {
-    this.setState({ isOnline: navigator.onLine ? true: false });
+componentDidMount() {
+  this.mounted = true;
+  getEvents().then((events) => {
+    if (this.mounted) {
+      this.setState({ events, locations: extractLocations(events) });
+    }
+  });
+}
+
+componentWillUnmount(){
+  this.mounted = false;
+}
+
+  updateEvents = (location) => {
     getEvents().then((events) => {
-      const locationEvents = (location === 'all') 
-      ? events
-      : events.filter((event) => event.location === location);
-      if(this.mounted) {
-        this.setState({
-        events: locationEvents.slice(0, eventCount),
-        location: location,
-        currentLocation: location
+      const locationEvents = (location === 'all') ?
+      events :
+      events.filter((event) => event.location === location);
+      this.setState({
+        events: locationEvents
       });
-      }
-        });    
-    };
-  
-    updateNumberOfEvents = async (e) => {
-      const newNumber = e.target.value ? parseInt(e.target.value) : 100;
-  
-      if(newNumber < 1 || newNumber > 100){
-          this.setState({ 
-          numberOfEvents: newNumber,
-          errorText: 'Please choose a number between 0 and 100' 
-      });
-      } else {
-          this.setState({
-          errorText:'',
-          numberOfEvents: newNumber
-        });
-        this.updateEvents(this.state.currentLocation, this.state.numberOfEvents);
-      } 
-    };
+    });
+  }
 
   render() {
     return (
       <div className="App">
-        <CitySearch />
-        <EventList /> 
-        <NumberOfEvents />
-        <Event />
+        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
+        <EventList events={this.state.events} numberOfEvents={this.state.numberOfEvents} /> 
       </div>
     );
   }
