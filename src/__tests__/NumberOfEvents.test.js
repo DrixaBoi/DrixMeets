@@ -14,9 +14,8 @@ describe('<NumberOfEvents /> component', () => {
 
     test('change state when text input changes', () => {
         NumberOfEventsWrapper.setState({ numberOfEvents: '32' });
-        NumberOfEventsWrapper.find(".numberOfEvents").simulate("change", {
-            target: { value: "13" }
-        });
-        expect(NumberOfEventsWrapper.state("numberOfEvents")).toEqual("13");
+        const eventCount = { target: { value: '13' }};
+        NumberOfEventsWrapper.find(".numberOfEvents").simulate("change", eventCount);
+        expect(NumberOfEventsWrapper.state("numberOfEvents")).toEqual('13');
     });
 });
