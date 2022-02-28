@@ -35,7 +35,7 @@ class Event extends Component {
             
             <button id='details-btn' className={`${collapsed ? "show" : "hide"}-details`}
                 onClick={this.handleClick}>
-                {collapsed ? "Show Details" : "Hide-Details"}
+                {collapsed ? "Show-Details" : "Hide-Details"}
             </button>
         
         </div> 
