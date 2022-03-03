@@ -2,6 +2,9 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  background-image: url(./images/Earth.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .App * {
@@ -38,6 +41,10 @@ input[type="number"] {
 
 .city {
   width: 250px;
+}
+
+.inputLabel {
+  color: white;
 }
 
 .CitySearch {
@@ -78,11 +85,16 @@ input[type="number"] {
 
 .event {
   padding: 10px 10px 35px;
+  margin: auto;
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 400px;
+  display: grid;
+  align-items: center;
 }
 
 .details-btn {
@@ -90,9 +102,17 @@ input[type="number"] {
   right: 5px;
   bottom: 5px;
   padding: 5px 8px;
-  border-radius: 4px;
+  border-radius: 1px;
   outline: none;
   cursor: pointer;
+}
+
+#details-btn {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #A9DBFF;
+  max-width: 100px;
+  display: flex;
 }
 
 .name {
@@ -114,10 +134,16 @@ input[type="number"] {
   overflow-x: hidden;
 }
 
+.NumberOfEvents {
+  margin: 20px auto;
+}
+
 .numberOfEvents {
   width: 200px;
-  margin: 20px auto;
+  margin: auto;
   text-align: center;
+  display: flex;
+  position: relative;
 }
 
 .button-wrapper {

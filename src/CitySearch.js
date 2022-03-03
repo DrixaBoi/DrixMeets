@@ -30,9 +30,11 @@ class CitySearch extends Component {
     render() {
         return (
             <div className="CitySearch">
+                <label className="inputLabel" for="city">Search for a City:</label>
                 <input
                     type="text"
                     className="city"
+                    placeholder="City Search"
                     value={this.state.query}
                     onChange={this.handleInputChanged}
                     onFocus={() => {
