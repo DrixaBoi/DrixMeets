@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DrixMeets/static/css/main.1f6e645d.css",
-    "main.js": "/DrixMeets/static/js/main.324e4be5.js",
+    "main.js": "/DrixMeets/static/js/main.cfe84cfa.js",
     "static/js/377.dda790c9.chunk.js": "/DrixMeets/static/js/377.dda790c9.chunk.js",
     "index.html": "/DrixMeets/index.html",
     "main.1f6e645d.css.map": "/DrixMeets/static/css/main.1f6e645d.css.map",
-    "main.324e4be5.js.map": "/DrixMeets/static/js/main.324e4be5.js.map",
+    "main.cfe84cfa.js.map": "/DrixMeets/static/js/main.cfe84cfa.js.map",
     "377.dda790c9.chunk.js.map": "/DrixMeets/static/js/377.dda790c9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f6e645d.css",
-    "static/js/main.324e4be5.js"
+    "static/js/main.cfe84cfa.js"
   ]
 }
