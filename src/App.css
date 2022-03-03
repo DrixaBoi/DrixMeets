@@ -3,7 +3,7 @@
   text-align: center;
   padding: 2% 5%;
   background-image: url(./images/Earth.jpeg);
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
