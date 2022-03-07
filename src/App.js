@@ -14,23 +14,23 @@ class App extends Component {
     numberOfEvents: 32
   };
   
-componentDidMount() {
-  this.mounted = true;
-  getEvents().then((events) => {
-    if (this.mounted) {
-      this.setState({ 
-          events: events.slice(0, this.state.numberOfEvents),
-          locations: extractLocations(events) 
-      });
-    }
-  });
-}
+  componentDidMount() {
+    this.mounted = true;
+    getEvents().then((events) => {
+      if (this.mounted) {
+        this.setState({ 
+            events: events.slice(0, this.state.numberOfEvents),
+            locations: extractLocations(events) 
+        });
+      }
+    });
+  }
 
-componentWillUnmount(){
-  this.mounted = false;
-}
+  componentWillUnmount(){
+    this.mounted = false;
+  }
 
-  updateEvents = (location, eventCount) => {
+  updateEvents = (location) => {
       getEvents().then((events) => {
         if (location) {
           const locationEvents = (location === 'all') ?
@@ -54,7 +54,7 @@ componentWillUnmount(){
     this.setState({
       numberOfEvents: eventCount,
     });
-    this.updateEvents(null, eventCount);
+    this.updateEvents(this.state.currentLocation);
   };
 
   render() {
