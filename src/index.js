@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import * as atatus from 'atatus-spa';
+
 atatus.config('0ff26f19e1324575b9514f999b9c1e69').install();
 
 ReactDOM.render(
