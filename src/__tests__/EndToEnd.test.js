@@ -44,7 +44,7 @@ describe('Filter events by city', () => {
     let browser;
     let page;
     beforeAll(async() => {
-        jest.setTimeout(30000);
+        jest.setTimeout(60000);
         browser = await puppeteer.launch({
       //      headless: false, //allows the testing process to be viewed
       //      slowMo: 250, //slows down the process by #-ms
