@@ -15,7 +15,7 @@ class App extends Component {
     locations: [],
     numberOfEvents: 32,
     showWelcomeScreen: undefined
-  };
+  }
 
   updateEvents = (location) => {
       getEvents().then((events) => {
@@ -42,16 +42,6 @@ class App extends Component {
       numberOfEvents: eventCount,
     });
     this.updateEvents(this.state.currentLocation);
-  };
-
-  getData = () => {
-    const { locations, events } = this.state;
-    const data = locations.map((location) => {
-      const number = events.filter((event) => event.location === location).length
-      const city = location.split(', ').shift()
-      return { city, number };
-    })
-    return data;
   };
   
   async componentDidMount() {
