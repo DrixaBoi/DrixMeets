@@ -17,26 +17,6 @@ class App extends Component {
     currentLocation: 'all',
     showWelcomeScreen: undefined
   };
-  
-  async componentDidMount() {
-    this.mounted = true;
-    const accessToken = localStorage.getItem('access_token');
-    const isTokenValid = (await checkToken(accessToken)).error ? false : true;
-    const searchParams = new URLSearchParams(window.location.search);
-    const code = searchParams.get("code");
-    this.setState({ showWelcomeScreen: !(code || isTokenValid) });
-    if ((code || isTokenValid) && this.mounted) {
-      getEvents().then((events) => {
-        if (this.mounted) {
-          this.setState({ events, locations: extractLocations(events) });
-        }
-      });
-    }
-  }  
-
-  componentWillUnmount(){
-    this.mounted = false;
-  }
 
   updateEvents = (location) => {
       getEvents().then((events) => {
@@ -64,6 +44,26 @@ class App extends Component {
     });
     this.updateEvents(this.state.currentLocation);
   };
+
+  async componentDidMount() {
+    this.mounted = true;
+    const accessToken = localStorage.getItem('access_token');
+    const isTokenValid = (await checkToken(accessToken)).error ? false : true;
+    const searchParams = new URLSearchParams(window.location.search);
+    const code = searchParams.get("code");
+    this.setState({ showWelcomeScreen: !(code || isTokenValid) });
+    if ((code || isTokenValid) && this.mounted) {
+      getEvents().then((events) => {
+        if (this.mounted) {
+          this.setState({ events, locations: extractLocations(events) });
+        }
+      });
+    }
+  }  
+
+  componentWillUnmount(){
+    this.mounted = false;
+  }
 
   render() {
     if (this.state.showWelcomeScreen === undefined) return <div className="App" />
