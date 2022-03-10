@@ -16,7 +16,7 @@ function WelcomeScreen(props) {
                         </div>
                             <button onClick={() => { props.getAccessToken() }}
                                 rel="nofollow noopener"
-                                class="btn-text"
+                                className="btn-text"
                             >
                                 <b>Sign in with google</b>
                                 </button>
