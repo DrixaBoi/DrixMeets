@@ -15,10 +15,11 @@ class NumberOfEvents extends Component {
                 infoText: 'Number must be between 1 and 32'
             });
         } else {
-        return this.setState({
+             this.setState({
                 numberOfEvents: number,
                 infoText: ''
             });
+            this.props.updateNumberOfEvents(number);
         }
     };
 
