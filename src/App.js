@@ -14,7 +14,6 @@ class App extends Component {
     events: [],
     locations: [],
     numberOfEvents: 32,
-    currentLocation: 'all',
     showWelcomeScreen: undefined
   };
 
