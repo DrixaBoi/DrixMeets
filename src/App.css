@@ -242,7 +242,5 @@ input[type="number"] {
 }
 
 .pie-chart {
-  background-color: black;
-  display: flex;
-  justify-content: center;
+  float: left;
 }
