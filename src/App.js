@@ -15,6 +15,7 @@ class App extends Component {
     events: [],
     locations: [],
     numberOfEvents: 32,
+    currentLocation: 'all',
     showWelcomeScreen: undefined
   }
 
@@ -77,32 +78,28 @@ getData = () => {
 
 
   render() {
-    const { locations, numberOfEvents, events} = this.state;
+    const { locations, numberOfEvents} = this.state;
     if (this.state.showWelcomeScreen === undefined) return <div className="App" />
 
     return (
       <div className="App">
-        <h1>Drix Meets</h1>
+        <h1>Drix Meets App</h1>
         <CitySearch locations={locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
         <h4>Events in each city</h4>
-        <div className="Scatter-grid">
-          <ResponsiveContainer height={400} >
-          <eventGenre events={events}/>
-          <ScatterChart
-            margin={{ 
-              top: 20, right: 20, bottom: 10, left: 10 
-            }}
-          >
-          <CartesianGrid/>
-          <XAxis type="category" dataKey="city" name="City" />
-          <YAxis type="number" dataKey="number" name="Total Events" allowDecimals={false} />
-          <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-          <Scatter data={this.getData()} fill="#8884d8" />
-          <Scatter data={this.getData()} fill="#82ca9d" />
-          </ScatterChart>
-          </ResponsiveContainer>
-        </div>
+        <ResponsiveContainer height={400} >
+        <ScatterChart
+          margin={{ 
+            top: 20, right: 20, bottom: 10, left: 10 
+          }}
+        >
+        <CartesianGrid/>
+        <XAxis type="category" dataKey="city" name="City" />
+        <YAxis type="number" dataKey="number" name="Total Events" allowDecimals={false} />
+        <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+        <Scatter data={this.getData()} fill="#8884d8" />
+        </ScatterChart>
+        </ResponsiveContainer>
+        <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
         <EventList events={this.state.events} />
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} /> 
       </div>

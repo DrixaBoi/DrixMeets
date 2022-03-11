@@ -2,7 +2,11 @@
 .App {
   text-align: center;
   padding: 2% 5%;
-  background-color: #0064AB;
+  background-image: url(./images/Earth.png);
+  background-size: cover;
+  background-repeat: no-repeat;  
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .App * {
@@ -223,9 +227,4 @@ input[type="number"] {
     min-width: auto;
     margin: 0 auto;
   }
-}
-
-.scatter-grid {
-  display: flex;
-  float: left;
 }
