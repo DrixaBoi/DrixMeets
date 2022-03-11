@@ -228,3 +228,9 @@ input[type="number"] {
     margin: 0 auto;
   }
 }
+
+.graph-div {
+  background-color: #0064AB;
+  display: flex;
+  flex-direction: row;
+}

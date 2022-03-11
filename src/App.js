@@ -86,7 +86,8 @@ class App extends Component {
         <h1>Drix Meets App</h1>
         <CitySearch locations={locations} updateEvents={this.updateEvents} />
         <h4>Events in each city</h4>
-        <div>
+        <div className="graph-div">
+          <EventGenre events={events}/>
           <ResponsiveContainer height={400} >
             <ScatterChart
               margin={{ 
