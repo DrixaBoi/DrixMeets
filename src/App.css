@@ -230,7 +230,11 @@ input[type="number"] {
 }
 
 .graph-div {
-  background-color: #0064AB;
   display: flex;
   flex-direction: row;
+  justify-items: center;
+}
+
+.scatter-grid {
+  background-color: black;
 }
