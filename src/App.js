@@ -85,7 +85,7 @@ class App extends Component {
       <div className="App">
         <h1>Drix Meets App</h1>
         <CitySearch locations={locations} updateEvents={this.updateEvents} />
-        <h4>Events in each city</h4>
+        <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
         <div className="graph-div">
           <EventGenre className="pie-chart" events={events}/>
           <ResponsiveContainer className="scatter-grid" height={400} >
@@ -102,7 +102,7 @@ class App extends Component {
             </ScatterChart>
           </ResponsiveContainer>
         </div>
-        <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
+        <h3>Events in each city</h3>
         <EventList events={events} />
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} /> 
       </div>
