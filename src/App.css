@@ -231,7 +231,7 @@ input[type="number"] {
 
 .graph-div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-items: center;
 }
 
@@ -241,6 +241,3 @@ input[type="number"] {
   justify-content: center;
 }
 
-.pie-chart {
-  float: left;
-}
