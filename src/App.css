@@ -237,7 +237,18 @@ input[type="number"] {
 
 .scatter-grid {
   background-color: black;
+  border-radius: 15%;
   display: flex;
   justify-content: center;
+}
+
+.pie-chart {
+  display: flex;
+  justify-content: center;
+}
+
+.text-style {
+  background-color: white;
+  border-radius: 15%;
 }
 
