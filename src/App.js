@@ -87,7 +87,7 @@ class App extends Component {
         <CitySearch locations={locations} updateEvents={this.updateEvents} />
         <h4>Events in each city</h4>
         <div className="graph-div">
-          <EventGenre events={events}/>
+          <EventGenre className="pie-chart" events={events}/>
           <ResponsiveContainer className="scatter-grid" height={400} >
             <ScatterChart
               margin={{ 

@@ -237,4 +237,12 @@ input[type="number"] {
 
 .scatter-grid {
   background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.pie-chart {
+  background-color: black;
+  display: flex;
+  justify-content: center;
 }
