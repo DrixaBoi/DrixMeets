@@ -86,24 +86,24 @@ getData = () => {
         <CitySearch locations={locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
         <h4>Events in each city</h4>
-        <div className="scatter-grid">
+        <div className="Scatter-grid">
           <ResponsiveContainer height={400} >
-            <ScatterChart
-              width={500}
-              margin={{ 
-                top: 20, right: 20, bottom: 10, left: 10 
-              }}
-            >
-            <CartesianGrid/>
-            <XAxis type="category" dataKey="city" name="City" />
-            <YAxis type="number" dataKey="number" name="Total Events" allowDecimals={false} />
-            <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-            <Scatter data={this.getData()} fill="#8884d8" />
-            <Scatter data={this.getData()} fill="#82ca9d" />
-            </ScatterChart>
+          <eventGenre events={events}/>
+          <ScatterChart
+            margin={{ 
+              top: 20, right: 20, bottom: 10, left: 10 
+            }}
+          >
+          <CartesianGrid/>
+          <XAxis type="category" dataKey="city" name="City" />
+          <YAxis type="number" dataKey="number" name="Total Events" allowDecimals={false} />
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+          <Scatter data={this.getData()} fill="#8884d8" />
+          <Scatter data={this.getData()} fill="#82ca9d" />
+          </ScatterChart>
           </ResponsiveContainer>
         </div>
-        <EventList events={events} />
+        <EventList events={this.state.events} />
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} /> 
       </div>
     );
