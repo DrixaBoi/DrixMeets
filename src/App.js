@@ -83,7 +83,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <img className="banner" src="../public/banner.png" alt="Banner" class="center"/>
+        <img className="banner" src="https://github.com/DrixaBoi/DrixMeets/blob/main/public/banner.png" alt="Banner" class="center"/>
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
         <CitySearch locations={locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
