@@ -5,7 +5,29 @@ DrixMeets is a webapp that will provide the users with the ability to search for
 Events can also be added by users for others to view and attend.
 
 
-Feature 2: Show/hide an even'ts details.
+FEATURE 1: Filter events by city.
+
+"As a user I should be able to filter events by city so that I can see the list of events in that city."
+
+Scenario 1: When user hasn’t searched for a city, show upcoming events from all cities. 
+
+-Given user hasn’t searched for any city yet 
+-When when user opens the app 
+-Then the user will see a list of events from all cities
+
+Scenario 2: User should see a list of suggestions when they search for a city. 
+-Given main page is open 
+-When user starts typing name of city 
+-Then user sees suggestions that match his search
+
+Scenario 3: User can select a city from the suggested list. 
+
+-Given user sees suggestions that match his search 
+-When user clicks on the suggested name 
+-Then user is redirected to list of events particular to the city
+
+
+FEATURE 2: Show/hide an even'ts details.
 
 "As a user, I should be able to show or hide an event, so that I can view details of events."
 
@@ -30,7 +52,7 @@ Scenario 3: User can collapse an event to hide its details.
 -Then details were once again hidden
 
 
-Feature 3: Specify number of events.
+FEATURE 3: Specify number of events.
 
 "As a user, I should be able to edit my amount of viewable events, so that I can view the amount I would like."
 
@@ -45,7 +67,7 @@ Scenario 2: User can change the number of events they want to see.
 -Then they are shown the amount they prefer
 
 
-Feature 4: Use the app when offline.
+FEATURE 4: Use the app when offline.
 
 "As a user, I should be able to use the app offline, so that I can still view the details of events saved since last online."
 
@@ -60,7 +82,7 @@ Scenario 2: Show error when user changes settings(city, time range)
 -Then an error will tell the user this isnt possible offline
 
 
-Feature 5: Data Visualization.
+FEATURE 5: Data Visualization.
 
 "As a user, I should be able to view a total of upcoming events, so that I can choose if there are any events I would like to attend."
 
