@@ -242,12 +242,6 @@ input[type="number"] {
   justify-content: center;
 }
 
-.pie-chart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .text-style {
   text-align: center;
   background-color: white;
@@ -258,5 +252,12 @@ input[type="number"] {
   padding: 3px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.header-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
