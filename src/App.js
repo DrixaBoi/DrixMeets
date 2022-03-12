@@ -83,7 +83,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <h1 className="text-style">-Drix Meets App-</h1>
+        <img className="banner" src="./images/Banner.png"/>
         <CitySearch locations={locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
         <div className="graph-div">
