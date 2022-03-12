@@ -84,6 +84,7 @@ class App extends Component {
     return (
       <div className="App">
         <img className="banner" src="./images/banner.png" alt="Banner" class="center"/>
+        <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
         <CitySearch locations={locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
         <div className="graph-div">
@@ -105,8 +106,7 @@ class App extends Component {
           </ResponsiveContainer>
         </div>
         <h3 className="text-style">-Events in each city-</h3>
-        <EventList events={events} />
-        <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} /> 
+        <EventList events={events} /> 
       </div>
     );
   }
