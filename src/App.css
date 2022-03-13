@@ -59,17 +59,24 @@ input[type="number"] {
   margin-bottom: 20px;
 }
 
-.header-items {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+.pie-chart {
+  grid-area: graph;
 }
 
-.pie-chart {
-  display: flex;
-  justify-content: center;
-  margin: 0px 0px -20px 0px;
+.CitySearch {
+  grid-area: city;
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+}
+
+.header-items {
+  display: grid;
+  grid-template-columns: 10% 20% 20% 20% 20% 10%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    ". . graph graph . ."
+    ". . city number . .";
 }
 
 .city {
@@ -81,10 +88,14 @@ input[type="number"] {
 }
 
 .CitySearch {
-  flex-basis: 300px;
+  grid-area: city;
   max-width: 300px;
   margin: auto;
   position: relative;
+}
+
+.NumberOfEvents {
+  grid-area: number;
 }
 
 .suggestions {
@@ -95,10 +106,6 @@ input[type="number"] {
   top: 43px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
-}
-
-.NumberOfEvents {
-  margin: 20px auto;
 }
 
 .numberOfEvents {

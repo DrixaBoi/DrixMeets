@@ -89,9 +89,7 @@ class App extends Component {
         </div>
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
         <div className="header-items">
-          <div className="pie-chart">
-            <EventGenre events={events}/>
-          </div>
+          <EventGenre events={events}/>
           <CitySearch locations={locations} updateEvents={this.updateEvents} />
           <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
         </div>
