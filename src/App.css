@@ -67,7 +67,7 @@ input[type="number"] {
 
 .CitySearch {
   grid-area: city;
-  max-width: 300px;
+  max-width: 200px;
   margin: auto;
   position: relative;
 }
@@ -96,13 +96,13 @@ input[type="number"] {
 
 .CitySearch {
   grid-area: city;
-  max-width: 275px;
+  max-width: 200px;
   margin: auto;
   position: relative;
 }
 
 .suggestions {
-  width: 250px;
+  max-width: 200px;
   z-index: 2;
   align-self: center;
   margin: 0;
