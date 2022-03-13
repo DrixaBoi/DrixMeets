@@ -89,9 +89,9 @@ class App extends Component {
         </div>
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
         <div className="header-items">
+        <EventGenre events={events}/>
           <CitySearch locations={locations} updateEvents={this.updateEvents} />
           <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
-          <EventGenre events={events}/>
         </div>
         <div className="graph-div">
           <ResponsiveContainer className="scatter-grid" height={400} >
