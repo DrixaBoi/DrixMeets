@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/DrixMeets/static/css/main.9091419f.css",
-    "main.js": "/DrixMeets/static/js/main.ef9939a5.js",
+    "main.css": "/DrixMeets/static/css/main.0fca8f50.css",
+    "main.js": "/DrixMeets/static/js/main.241f1823.js",
     "static/js/377.c6d568f6.chunk.js": "/DrixMeets/static/js/377.c6d568f6.chunk.js",
     "static/media/Earth.png": "/DrixMeets/static/media/Earth.52db90eb20a60c5c920b.png",
     "service-worker.js": "/DrixMeets/service-worker.js",
     "index.html": "/DrixMeets/index.html",
-    "main.9091419f.css.map": "/DrixMeets/static/css/main.9091419f.css.map",
-    "main.ef9939a5.js.map": "/DrixMeets/static/js/main.ef9939a5.js.map",
+    "main.0fca8f50.css.map": "/DrixMeets/static/css/main.0fca8f50.css.map",
+    "main.241f1823.js.map": "/DrixMeets/static/js/main.241f1823.js.map",
     "377.c6d568f6.chunk.js.map": "/DrixMeets/static/js/377.c6d568f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9091419f.css",
-    "static/js/main.ef9939a5.js"
+    "static/css/main.0fca8f50.css",
+    "static/js/main.241f1823.js"
   ]
 }
