@@ -61,6 +61,7 @@ input[type="number"] {
 
 .pie-chart {
   grid-area: graph;
+  margin: auto;
 }
 
 .CitySearch {
@@ -72,6 +73,7 @@ input[type="number"] {
 
 .NumberOfEvents {
   grid-area: number;
+  margin: auto;
 }
 
 .header-items {
