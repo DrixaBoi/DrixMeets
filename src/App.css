@@ -63,6 +63,11 @@ input[type="number"] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: right;
+}
+
+.pie-chart {
+  float: left;
 }
 
 .city {
