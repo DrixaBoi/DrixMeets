@@ -85,7 +85,7 @@ class App extends Component {
       <div className="App">
         <div className="header">
           <h1>Drix Meets</h1>
-          <p>A Search by City Events App for Desktop of Phone </p>
+          <p>A Search by City Events App for Desktop or Phone </p>
         </div>
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
         <div className="header-items">
