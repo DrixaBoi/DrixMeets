@@ -67,7 +67,8 @@ input[type="number"] {
 }
 
 .pie-chart {
-  float: left;
+  display: flex;
+  justify-content: center;
 }
 
 .city {
@@ -103,6 +104,8 @@ input[type="number"] {
   width: 200px;
   margin: auto;
   text-align: center;
+  display: flex;
+  position: relative;
 }
 
 .Alert {
