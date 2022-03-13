@@ -79,8 +79,7 @@ input[type="number"] {
   grid-template-columns: 10% 20% 20% 20% 20% 10%;
   grid-template-rows: auto;
   grid-template-areas: 
-    ". graph graph city . ."
-    ". . . . number .";
+    ". graph graph city number ."
 }
 
 .city {
