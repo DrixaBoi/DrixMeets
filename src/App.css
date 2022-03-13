@@ -63,7 +63,7 @@ input[type="number"] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .pie-chart {
@@ -79,8 +79,6 @@ input[type="number"] {
 }
 
 .CitySearch {
-  display: flex;
-  flex-direction: column;
   flex-basis: 300px;
   max-width: 300px;
   margin: auto;
@@ -105,8 +103,6 @@ input[type="number"] {
   width: 200px;
   margin: auto;
   text-align: center;
-  display: flex;
-  position: relative;
 }
 
 .Alert {
