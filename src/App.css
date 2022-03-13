@@ -66,17 +66,19 @@ input[type="number"] {
 .CitySearch {
   grid-area: city;
   max-width: 300px;
-  margin: auto;
-  position: relative;
+}
+
+.NumberOfEvents {
+  grid-area: number;
 }
 
 .header-items {
   display: grid;
-  grid-template-columns: 10% 20% 20% 20% 20% 10%;
+  grid-template-columns: 5% 30% 30% 30% 5%;
   grid-template-rows: auto;
   grid-template-areas: 
-    ". . graph graph . ."
-    ". . city number . .";
+    ". graph ."
+    ". city . number .";
 }
 
 .city {
@@ -90,12 +92,6 @@ input[type="number"] {
 .CitySearch {
   grid-area: city;
   max-width: 300px;
-  margin: auto;
-  position: relative;
-}
-
-.NumberOfEvents {
-  grid-area: number;
 }
 
 .suggestions {
