@@ -83,14 +83,17 @@ class App extends Component {
     
     return (
       <div className="App">
-        <img className="banner" src="../public/banner.png" alt="Banner" class="center"/>
+        <div className="header">
+          <h1>Drix Meets</h1>
+          <p>A Search by City Events App for Desktop of Phone </p>
+        </div>
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
-        <CitySearch locations={locations} updateEvents={this.updateEvents} />
-        <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
-        <div className="graph-div">
-          <div className="pie-chart">
+        <div className="header-items">
+          <CitySearch locations={locations} updateEvents={this.updateEvents} />
+          <NumberOfEvents numberOfEvents={numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
           <EventGenre events={events}/>
-          </div>
+        </div>
+        <div className="graph-div">
           <ResponsiveContainer className="scatter-grid" height={400} >
             <ScatterChart
               margin={{ 
